@@ -1,13 +1,57 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>torrent2</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Torrent 解析器 — 在线 .torrent 文件解析 &amp; Bencode 解码工具</title>
+  <meta name="description" content="免费在线 BitTorrent 种子解析器，纯前端解析 .torrent 文件，支持 Bencode 解码、Info Hash 计算、Tracker 提取、磁力链接生成。无需上传到服务器，数据仅在你的浏览器中处理。" />
+  <meta name="keywords" content="torrent解析器,种子解析,bencode解码,infohash计算,torrent解析,torrent parser,磁力链接解析,BT种子" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Torrent Parser" />
+  <meta name="application-name" content="Torrent Parser" />
+  <link rel="canonical" href="https://torrents.7471.top/" />
+
+  <meta property="og:title" content="Torrent Parser — 在线种子文件解析工具" />
+  <meta property="og:description" content="纯前端 BitTorrent 文件解析器，实时解析 .torrent 文件和磁力链接，提取 Info Hash、Tracker、文件列表等全部元数据，无需上传到服务器。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://torrents.7471.top/" />
+  <meta property="og:site_name" content="Torrent Parser" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Torrent Parser — 在线种子文件解析工具" />
+  <meta name="twitter:description" content="纯前端 BitTorrent 文件解析器，实时解析 .torrent 文件和磁力链接，无需上传到服务器。" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230891b2'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='white' font-family='monospace, sans-serif' font-weight='bold'>T</text></svg>" />
+
+  <style>
+    :root { color-scheme: light dark; }
+    html, body { background: light-dark(#f1f5f9, #0c1220); color: light-dark(#0f172a, #e2e8f0); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Torrent Parser",
+    "alternateName": "Torrent 解析器",
+    "url": "https://torrents.7471.top/",
+    "description": "纯前端 BitTorrent 种子解析工具，支持 .torrent 文件解析、Bencode 解码、Info Hash 计算、Tracker 提取、磁力链接生成。所有解析在浏览器本地完成，不上传到任何服务器。",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CNY"
+    },
+    "inLanguage": ["zh-CN", "en"]
+  }
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
 </html>

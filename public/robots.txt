@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://torrents.7471.top/sitemap.xml
