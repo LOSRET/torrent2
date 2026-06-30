@@ -20,7 +20,7 @@ function objKeys(v: Record<string, unknown>): string[] {
 <template>
   <div v-if="raw" class="rounded-xl border border-border bg-surface overflow-hidden">
     <div class="flex items-center gap-2 px-5 py-3.5 border-b border-border bg-surface-2">
-      <span class="text-xs font-semibold px-2 py-0.5 rounded-md bg-slate-500/10 text-slate-600 dark:text-slate-300 font-mono">原始</span>
+      <span class="text-xs font-semibold px-2 py-0.5 rounded-md bg-accent/10 text-accent font-mono">原始</span>
       <h2 class="text-sm font-semibold text-text">Bencode 结构</h2>
       <button
         type="button"

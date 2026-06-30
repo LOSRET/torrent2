@@ -60,7 +60,6 @@ onUnmounted(() => document.removeEventListener('paste', onPaste))
 
 <template>
   <div
-    ref="dropZone"
     role="button"
     tabindex="0"
     aria-label="点击或拖放 .torrent 文件到此处"
