@@ -48,7 +48,7 @@ const {
       <!-- 加载状态 -->
       <div v-if="viewState === 'loading'" class="flex flex-col items-center justify-center py-20 gap-4">
         <div class="w-48 h-1 rounded-full bg-surface-2 overflow-hidden">
-          <div class="h-full w-1/3 bg-accent rounded-full" style="animation: loading-slide 1.2s ease-in-out infinite" />
+          <div class="h-full w-1/3 bg-accent rounded-full" style="animation: loading-slide 1.2s linear infinite" />
         </div>
         <p class="text-text-muted text-sm">正在解析文件…</p>
       </div>
