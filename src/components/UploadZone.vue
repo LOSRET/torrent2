@@ -76,7 +76,7 @@ onUnmounted(() => document.removeEventListener('paste', onPaste))
         v-for="i in 144"
         :key="i"
         class="aspect-square bg-accent rounded-sm opacity-[0.04] dark:opacity-[0.07]"
-        :style="{ animation: `piece-pulse ${2 + (i % 5) * 0.3}s ease-in-out ${i * 0.01}s infinite` }"
+        :style="{ animation: `piece-pulse ${1.5 + (i * 7 % 11) * 0.2}s ease-in-out ${(i * 13 % 17) * 0.05}s infinite` }"
       />
     </div>
 
