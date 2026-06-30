@@ -13,6 +13,11 @@ const magnetInput = ref('')
 const magnetHint = ref('')
 const isDragging = ref(false)
 
+const pieceStyles = Array.from({ length: 144 }, () => ({
+  duration: 1.5 + Math.random() * 2,
+  delay: Math.random() * 3,
+}))
+
 function onDrop(e: DragEvent) {
   e.preventDefault()
   isDragging.value = false
@@ -73,10 +78,10 @@ onUnmounted(() => document.removeEventListener('paste', onPaste))
     <!-- 分片网格背景 (签名视觉元素) -->
     <div class="absolute inset-0 grid grid-cols-24 gap-0 pointer-events-none" aria-hidden="true">
       <div
-        v-for="i in 144"
+        v-for="(style, i) in pieceStyles"
         :key="i"
         class="aspect-square bg-accent rounded-sm opacity-[0.04] dark:opacity-[0.07]"
-        :style="{ animation: `piece-pulse ${1.5 + (i * 7 % 11) * 0.2}s ease-in-out ${(i * 13 % 17) * 0.05}s infinite` }"
+        :style="{ animation: `piece-pulse ${style.duration}s ease-in-out ${style.delay}s infinite` }"
       />
     </div>
 
