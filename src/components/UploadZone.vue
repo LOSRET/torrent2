@@ -71,12 +71,12 @@ onUnmounted(() => document.removeEventListener('paste', onPaste))
     @drop="onDrop"
   >
     <!-- 分片网格背景 (签名视觉元素) -->
-    <div class="absolute inset-0 grid grid-cols-12 gap-1 p-4 opacity-[0.04] dark:opacity-[0.07] pointer-events-none" aria-hidden="true">
+    <div class="absolute inset-0 grid grid-cols-24 gap-0 pointer-events-none" aria-hidden="true">
       <div
-        v-for="i in 72"
+        v-for="i in 144"
         :key="i"
-        class="aspect-square bg-accent rounded-sm"
-        :style="{ animation: `piece-pulse ${2 + (i % 5) * 0.3}s ease-in-out ${i * 0.04}s infinite` }"
+        class="aspect-square bg-accent rounded-sm opacity-[0.04] dark:opacity-[0.07]"
+        :style="{ animation: `piece-pulse ${2 + (i % 5) * 0.3}s ease-in-out ${i * 0.01}s infinite` }"
       />
     </div>
 

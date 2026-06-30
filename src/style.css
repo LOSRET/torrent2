@@ -16,6 +16,8 @@
   --color-success: var(--c-success);
   --color-warning: var(--c-warning);
   --color-danger: var(--c-danger);
+
+  --grid-cols-24: repeat(24, minmax(0, 1fr));
 }
 
 :root {
@@ -66,8 +68,8 @@ body {
 }
 
 @keyframes piece-pulse {
-  0%, 100% { opacity: 0.15; }
-  50% { opacity: 0.5; }
+  0%, 100% { opacity: 0.05; }
+  50% { opacity: 0.12; }
 }
 
 @keyframes loading-slide {
