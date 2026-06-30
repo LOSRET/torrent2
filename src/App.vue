@@ -81,6 +81,7 @@ const {
           :data="current"
           :raw="currentRaw"
           @export="current && exportJson(current)"
+          @reset="reset"
         />
       </template>
     </main>

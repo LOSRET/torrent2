@@ -17,7 +17,7 @@ defineProps<{
   raw: BencodeDict | null
 }>()
 
-defineEmits<{ export: [] }>()
+defineEmits<{ export: []; reset: [] }>()
 </script>
 
 <template>
@@ -26,7 +26,7 @@ defineEmits<{ export: [] }>()
       <button
         type="button"
         class="text-sm text-text-muted hover:text-accent transition-colors flex items-center gap-1"
-        @click="$emit('export')"
+        @click="$emit('reset')"
       >
         ← 解析新文件
       </button>
@@ -41,13 +41,9 @@ defineEmits<{ export: [] }>()
 
     <StatCards :data="data" />
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-      <TorrentInfo :data="data" />
-      <div class="flex flex-col gap-4">
-        <PieceInfo :data="data" />
-        <FileTypeChart :files="data.files" :total-size="data.total_size" />
-      </div>
-    </div>
+    <TorrentInfo :data="data" />
+    <PieceInfo :data="data" />
+    <FileTypeChart :files="data.files" :total-size="data.total_size" />
 
     <TrackerList :data="data" />
     <WebSeedList :urls="data.web_seeds" />
